@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "client-install": "yarn --cwd client",
-    "start-client": "yarn --cwd client start",
-    "build-client": "yarn --cwd client build",
+    "client-start": "yarn --cwd client start",
+    "client-build": "yarn --cwd client build",
     "start": "node server.js",
     "server": "nodemon server.js",
     "dev": "concurrently \"yarn server\" \"yarn start-client\""
