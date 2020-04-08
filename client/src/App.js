@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import api from './services/api';
+import axios from 'axios';
 
 const App = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     async function loadUsers() {
-      const response = await api.get('/users');
+      const response = await axios.get('/users');
       if (response.data) {
         setUsers(response.data);
       }
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div id="app">
       <ul>
-        {users.map(user => (
+        {users.map((user) => (
           <li>
             {user.id} - {user.name}
           </li>
